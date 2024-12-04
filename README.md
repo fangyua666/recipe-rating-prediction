@@ -66,6 +66,5 @@ For simplicity and readability, here is the head of my cleaned `'recipes'` DataF
   height="600"
   frameborder="0"
 ></iframe>
-
 fsdfds
 
