@@ -45,3 +45,10 @@ For simplicity and readability, here is the head of my cleaned `'recipes'` DataF
 ---
 
 ### Univariate Analysis
+
+<iframe
+  src="assets/distribution_of_rating.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
