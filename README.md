@@ -36,11 +36,11 @@ For simplicity and readability, here is the head of my cleaned `'recipes'` DataF
 
 | **id**   | **minutes** | **tags**                                          | **n_steps** | **n_ingredients** | **rating_avg** | **calories** | **total_fat** | **minutes_category** | **calories_category** |
 |----------|-------------|--------------------------------------------------|-------------|--------------------|----------------|--------------|---------------|----------------------|-----------------------|
-| 333281   | 40          | [60-minutes-or-less, time-to-make, course, mai...] | 10          | 9                  | 4.0            | 138.4        | 10.0          | Medium               | Low                   |
-| 453467   | 45          | [60-minutes-or-less, time-to-make, cuisine, pr...] | 12          | 11                 | 5.0            | 595.1        | 46.0          | Medium               | Very High             |
-| 306168   | 40          | [60-minutes-or-less, time-to-make, course, mai...] | 6           | 9                  | 5.0            | 194.8        | 20.0          | Medium               | Low                   |
-| 306168   | 40          | [60-minutes-or-less, time-to-make, course, mai...] | 6           | 9                  | 5.0            | 194.8        | 20.0          | Medium               | Low                   |
-| 306168   | 40          | [60-minutes-or-less, time-to-make, course, mai...] | 6           | 9                  | 5.0            | 194.8        | 20.0          | Medium               | Low                   |
+| 333281   | 40          | [60-minutes-or-less ...]                         | 10          | 9                  | 4.0            | 138.4        | 10.0          | Medium               | Low                   |
+| 453467   | 45          | [60-minutes-or-less ...]                         | 12          | 11                 | 5.0            | 595.1        | 46.0          | Medium               | Very High             |
+| 306168   | 40          | [60-minutes-or-less ...]                         | 6           | 9                  | 5.0            | 194.8        | 20.0          | Medium               | Low                   |
+| 306168   | 40          | [60-minutes-or-less ...]                         | 6           | 9                  | 5.0            | 194.8        | 20.0          | Medium               | Low                   |
+| 306168   | 40          | [60-minutes-or-less ...]                         | 6           | 9                  | 5.0            | 194.8        | 20.0          | Medium               | Low                   |
 
 ---
 
