@@ -28,3 +28,20 @@ The dataset, sourced from Food.com, contains recipes and ratings posted since 20
 ---
 
 ## Data Cleaning and Exploratory Data Analysis
+### Data Cleaning
+
+First, I merged the recipes and interactions datasets using a left join to ensure that all recipes were included. I replaced `'0'` ratings with `'NaN'` to represent missing values. Next, I calculated the average rating for each recipe and added it as a new column (`'rating_avg'`) to serve as the target variable for prediction. I converted string columns like `'tags'`, `'nutrition'`, and `'ingredients'` into lists for feature extraction. Specifically, I splitted the `'nutrition'` column into separate attributes (e.g., `'calories'`, `'total_fat'`, `'protein'`) and converted them into floats for future investigation. The submitted column, initially stored as a string, was converted into a datetime object. Additionally, I categorized the `'minutes'` and `'calories'` columns into five bins and created new columns, `'minutes_category'` and `'calories_category'` respectively for future one-hot encoding.
+
+For simplicity and readability, here is the head of my cleaned `'recipes'` DataFrame:
+
+| **id**   | **minutes** | **tags**                                          | **n_steps** | **n_ingredients** | **rating_avg** | **calories** | **total_fat** | **minutes_category** | **calories_category** |
+|----------|-------------|--------------------------------------------------|-------------|--------------------|----------------|--------------|---------------|----------------------|-----------------------|
+| 333281   | 40          | [60-minutes-or-less, time-to-make, course, mai...] | 10          | 9                  | 4.0            | 138.4        | 10.0          | Medium               | Low                   |
+| 453467   | 45          | [60-minutes-or-less, time-to-make, cuisine, pr...] | 12          | 11                 | 5.0            | 595.1        | 46.0          | Medium               | Very High             |
+| 306168   | 40          | [60-minutes-or-less, time-to-make, course, mai...] | 6           | 9                  | 5.0            | 194.8        | 20.0          | Medium               | Low                   |
+| 306168   | 40          | [60-minutes-or-less, time-to-make, course, mai...] | 6           | 9                  | 5.0            | 194.8        | 20.0          | Medium               | Low                   |
+| 306168   | 40          | [60-minutes-or-less, time-to-make, course, mai...] | 6           | 9                  | 5.0            | 194.8        | 20.0          | Medium               | Low                   |
+
+---
+
+### Univariate Analysis
