@@ -45,6 +45,10 @@ For simplicity and readability, here is the head of my cleaned `'recipes'` DataF
 ---
 
 ### Univariate Analysis
-fsfds
-sfsdfds
+<iframe
+  src="assets/frequency.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
 ---
