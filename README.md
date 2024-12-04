@@ -118,20 +118,19 @@ For my baseline model, I trained a **Linear Regression** model using both quanti
 ---
 
 ## Final Model
-### New Features:
-**minutes_category:** Based on the plot analyzing the relationship between tags and average ratings, I observed that tags indicating preparation times (e.g. “30-minutes-or-less”) tend to have higher average ratings. To incorporate this intuition, I preprocessed the `minutes` column by dividing it into five categories as mentioned and created a new categorical feature named `minutes_category`.  
+### New Features
+`minutes_category`: Based on the plot analyzing the relationship between tags and average ratings, I observed that tags indicating preparation times (e.g. “30-minutes-or-less”) tend to have higher average ratings. To incorporate this intuition, I preprocessed the `minutes` column by dividing it into five categories as mentioned and created a new categorical feature named `minutes_category`.  
 
-**n_steps & n_ingredients:** The analysis of tags also revealed that recipes with fewer preparation steps and ingredients will receive higher ratings. Intuitively, individuals will prefer convenient recipes with less number of steps and less complicated ingredients. Thus, I employed `n_steps` and `n_ingredients` as quantitative features. 
+`n_steps` & `n_ingredients`: The analysis of tags also revealed that recipes with fewer preparation steps and ingredients will receive higher ratings. Intuitively, individuals will prefer convenient recipes with less number of steps and less complicated ingredients. Thus, I employed `n_steps` and `n_ingredients` as quantitative features. 
 
-**calories_category:** People on diet will prefer recipes with tags such as "low-carb" or "low-in-something", as those tags also closely relate with recipe ratings. To capture this trend, I preprocessed the `calories` column into five bins and created a new categorical feature `calories_category`. 
+`calories_category`: People on diet will prefer recipes with tags such as "low-carb" or "low-in-something", as those tags also closely relate with recipe ratings. To capture this trend, I preprocessed the `calories` column into five bins and created a new categorical feature `calories_category`. 
 
-**total_fat:**
-Intuitively, people who prioritize health will prefer recipes with lower fat content. By including `total_fat` as a feature, the model can better predict ratings based on the nutrition profile of recipes.
+`total_fat`: Intuitively, people who prioritize health will prefer recipes with lower fat content. By including `total_fat` as a feature, the model can better predict ratings based on the nutrition profile of recipes.
 
-### Feature Engineering:
+### Feature Engineering
 Generally, I employed three feature engineering approaches on the selected features correspondingly. For quantitative features, through **PolynomialFeatures** from scikit-learn, I expanded `n_steps` and `n_ingredients` columns by generating high-order terms to capture non-linear patterns. Then, by using **StandardScaler**, I standardized those polynomial features, ensuring consistency during model training. Moreover, I standardized the `total_fat` feature to ensure it has the same scale as the transformed features. For categorical features, by utilizing **OneHotEncoder**, I performed one-hot encoding on both `minutes_category` and `calories_category` to further enhance model performance.
 
-### Model Algorithm & Hyperparameter Tuning:
+### Algorithm & Hyperparameter
 I intended to enhance the model performance and prevent overfitting by employing **Ridge Regression** as my model algorithm. To better optimize, I tuned the polynomial degree for `n_steps` and `n_ingredients` features within the range of 1 to 4 to capture nonlinear relationships. Moreover, I tuned the regularization term (alpha) for Ridge Regression with values [0, 0.25, 0.5, 1, 2, 4]. Utilizing **GridSearchCV** with 5-fold cross-validation, the best hyperparameters were identified as a polynomial degree of 4 for both `n_steps` and `n_ingredients`, and alpha = 1 for L2 regularization term. 
 
 ### Model Performance
