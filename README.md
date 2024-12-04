@@ -45,13 +45,16 @@ For simplicity and readability, here is the head of my cleaned `'recipes'` DataF
 ---
 
 ### Univariate Analysis
+This following histogram with a left-skewed curve reveals that the majority of recipes(over 140k) have an average rating of 5. There is a significant drop in frequency for recipes with average ratings below 4, suggesting that highly-rated recipes dominate the dataset. This trend implies that users are more likely to favor popular, well-reviewed recipes and may be inclined to rate these recipes highly as well, reinforcing the dominance of high ratings in the dataset.
+
 <iframe
   src="assets/frequency.html"
   width="800"
   height="600"
   frameborder="0"
 ></iframe>
----
+
+This following bar chart with right-skewed reveals the most commonly used tags associated with recipes on Food.com. The most frequent tags often relate to preparation time, main ingredients, dietary attributes (such as "low-carb" or "low-sugar"), and required equipment. Understanding these tag frequencies helps in analyzing which types of recipes may achieve higher average ratings. For instance, people generally prefer healthy, tasty recipes that require minimal equipment and less preparation time, suggesting that recipes with such tags are likely to have higher average ratings. 
 
 <iframe
   src="assets/distribution.html"
@@ -60,12 +63,16 @@ For simplicity and readability, here is the head of my cleaned `'recipes'` DataF
   frameborder="0"
 ></iframe>
 
+This following scatter plot shows the relationship between calories and total fat for recipes with calories under 500. There is a clear positive trend, indicating that recipes with higher calorie content within this range also tend to have higher amounts of total fat. This suggests that within lower-calorie recipes, fat contributes significantly to the calorie count.
+
 <iframe
   src="assets/scatter.html"
   width="800"
   height="600"
   frameborder="0"
 ></iframe>
+
+This following bar chart shows the average ratings for recipes with the most common, intermediate, and least common tags. Recipes with the most common tags, such as "15-minutes-or-less," "dietary," and "low-in-something," generally have high average ratings around 4.5 or above, indicating that popular recipe types focused on convenience, health, and common meal categories are well-received. Recipes with intermediate tags show a similar trend, maintaining relatively high ratings. However, recipes with the least common tags display more variability, with some tags achieving ratings near 5 and others much lower, suggesting that niche or specific recipe characteristics evoke mixed responses from users. This indicates that widely appealing recipe tags are associated with higher average ratings, while less common tags are more polarizing. To answer the question, the features will be subset from the most common tags, since it provide generally a stable high rating.
 
 <iframe
   src="assets/tag.html"
